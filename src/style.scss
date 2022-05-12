@@ -73,6 +73,19 @@ $bw-ts--break-min-tablet: 481px;
 	  }
 	}
 
+  	button.bw-ts--control:focus-visible {
+
+		background-color: black;
+		
+		@media only screen and (min-width: $bw-ts--break-min-tablet){
+			background-color: transparent;
+			color: black;
+			transform: scale(1.1);
+		}
+
+	}
+
+
 	@media only screen and (min-width: $bw-ts--break-min-tablet){
 	  button.bw-ts--control:not(focus):hover {
 		transform: scale(1.1);

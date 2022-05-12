@@ -61,6 +61,16 @@
     color: #C8D3B6;
   }
 }
+.bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:focus-visible {
+  background-color: black;
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:focus-visible {
+    background-color: transparent;
+    color: black;
+    transform: scale(1.1);
+  }
+}
 @media only screen and (min-width: 481px) {
   .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:not(focus):hover {
     transform: scale(1.1);
