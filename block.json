@@ -1,0 +1,17 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "create-block/bw-testimonial-slider",
+	"version": "0.1.0",
+	"title": "BW Testimonial Slider",
+	"category": "design",
+	"icon": "align-left",
+	"description": "Display a slider for testimonials in the form of wordpress block quotes",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "bw-testimonial-slider",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

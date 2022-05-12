@@ -1,0 +1,160 @@
+$bw-ts--color-green-light: #C8D3B6;
+$bw-ts--color-blackish: #424242;
+$bw-ts--color-whitish: #fffef7;
+
+$bw-ts--break-max-mobile: 480px;
+$bw-ts--break-min-tablet: 481px;
+
+.bw-ts--wrapper {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media only screen and (min-width: $bw-ts--break-min-tablet){
+	flex-wrap: nowrap;
+  }
+
+  .bw-ts--control-container {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	width: 50px;
+	margin-top: 2rem;
+
+	@media only screen and (min-width: $bw-ts--break-min-tablet){
+	  margin-top: 2rem;
+	}
+
+	//to wrap controls below slides on mobile
+	order: 2;
+
+	@media only screen and (min-width: $bw-ts--break-min-tablet){
+	  order: 0;
+	}
+
+	&.bw-ts--left {
+	  justify-content: flex-start;
+	}
+
+	&.bw-ts--right {
+	  justify-content: flex-end;
+	}
+
+	/* Stupid selector to override theme button styling: Supposed to apply to all states */
+	button.bw-ts--control:not(focus), button.bw-ts--control:focus {
+	  border: none;
+	  transition: all 100ms ease-in-out;
+
+	  font-size: 24px;
+	  padding: 0.3rem 1.5rem;
+	  -webkit-border-radius: 4px;
+	  -moz-border-radius: 4px;
+	  border-radius: 4px;
+
+	  @media only screen and (min-width: $bw-ts--break-min-tablet){
+		padding: 0;
+		font-size: 40px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	  }
+
+	}
+
+	button.bw-ts--control:not(focus) {
+
+	  background-color: $bw-ts--color-green-light;
+	  color: $bw-ts--color-whitish;
+
+	  @media only screen and (min-width: $bw-ts--break-min-tablet){
+		background-color: transparent;
+		color: $bw-ts--color-green-light;
+	  }
+	}
+
+	@media only screen and (min-width: $bw-ts--break-min-tablet){
+	  button.bw-ts--control:not(focus):hover {
+		transform: scale(1.1);
+	  }
+	}
+
+	button.bw-ts--control:focus {
+	  outline: none;
+	}
+
+	@media only screen and (max-width: $bw-ts--break-max-mobile){
+
+	    button.bw-ts--control {
+		  -webkit-transition: background-color 50ms;
+		  -moz-transition: background-color 50ms;
+		  -ms-transition: background-color 50ms;
+		  -o-transition: background-color 50ms;
+		  transition: background-color 50ms;
+		}
+
+	  	button.bw-ts--control:active {
+		  background-color: $bw-ts--color-blackish;
+		}
+	}
+
+	button-bw-ts--control:focus-visible {
+	  outline: 2px dashed $bw-ts--color-blackish;
+	}
+  }
+
+
+  .bw-ts--slides-container {
+
+	flex-grow: 1;
+	position: relative;
+
+	//to push controls below slides on mobile
+	width: 100%;
+	@media only screen and (min-width: $bw-ts--break-min-tablet){
+	  width: auto;
+	}
+
+	blockquote.wp-block-quote::before{
+	  display: none;
+	}
+
+	blockquote.wp-block-quote {
+
+	  padding-left: 0px;
+	  visibility: hidden;
+	  position: absolute;
+	  width: 100%;
+
+	  top: 50%;
+	  transform: translateY(-50%);
+
+	  p {
+		font-size: 1rem;
+	  	line-height: 1.6;
+
+		&::before, &::after {
+		  font-size: 1.5rem;
+		}
+
+		/*@media only screen and (min-width: $bw-ts--break-min-tablet){
+		  font-size: 1.25rem;
+
+		  &::before, &::after {
+			font-size: 2rem;
+		  }
+		}*/
+	  }
+
+	}
+
+	blockquote.wp-block-quote.bw-ts--active {
+	  visibility: visible;
+	  margin-bottom: 0px;
+	}
+
+  }
+
+}
+
+

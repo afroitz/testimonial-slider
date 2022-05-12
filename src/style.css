@@ -1,0 +1,127 @@
+.bw-ts--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper {
+    flex-wrap: nowrap;
+  }
+}
+.bw-ts--wrapper .bw-ts--control-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  margin-top: 2rem;
+  order: 2;
+  /* Stupid selector to override theme button styling: Supposed to apply to all states */
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--control-container {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--control-container {
+    order: 0;
+  }
+}
+.bw-ts--wrapper .bw-ts--control-container.bw-ts--left {
+  justify-content: flex-start;
+}
+.bw-ts--wrapper .bw-ts--control-container.bw-ts--right {
+  justify-content: flex-end;
+}
+.bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:not(focus), .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:focus {
+  border: none;
+  transition: all 100ms ease-in-out;
+  font-size: 24px;
+  padding: 0.3rem 1.5rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:not(focus), .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:focus {
+    padding: 0;
+    font-size: 40px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+  }
+}
+.bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:not(focus) {
+  background-color: #C8D3B6;
+  color: #fffef7;
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:not(focus) {
+    background-color: transparent;
+    color: #C8D3B6;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:not(focus):hover {
+    transform: scale(1.1);
+  }
+}
+.bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:focus {
+  outline: none;
+}
+@media only screen and (max-width: 480px) {
+  .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control {
+    -webkit-transition: background-color 50ms;
+    -moz-transition: background-color 50ms;
+    -ms-transition: background-color 50ms;
+    -o-transition: background-color 50ms;
+    transition: background-color 50ms;
+  }
+  .bw-ts--wrapper .bw-ts--control-container button.bw-ts--control:active {
+    background-color: #424242;
+  }
+}
+.bw-ts--wrapper .bw-ts--control-container button-bw-ts--control:focus-visible {
+  outline: 2px dashed #424242;
+}
+.bw-ts--wrapper .bw-ts--slides-container {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+@media only screen and (min-width: 481px) {
+  .bw-ts--wrapper .bw-ts--slides-container {
+    width: auto;
+  }
+}
+.bw-ts--wrapper .bw-ts--slides-container blockquote.wp-block-quote::before {
+  display: none;
+}
+.bw-ts--wrapper .bw-ts--slides-container blockquote.wp-block-quote {
+  padding-left: 0px;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bw-ts--wrapper .bw-ts--slides-container blockquote.wp-block-quote p {
+  font-size: 1rem;
+  line-height: 1.6;
+  /*@media only screen and (min-width: $bw-ts--break-min-tablet){
+    font-size: 1.25rem;
+
+    &::before, &::after {
+  	font-size: 2rem;
+    }
+  }*/
+}
+.bw-ts--wrapper .bw-ts--slides-container blockquote.wp-block-quote p::before, .bw-ts--wrapper .bw-ts--slides-container blockquote.wp-block-quote p::after {
+  font-size: 1.5rem;
+}
+.bw-ts--wrapper .bw-ts--slides-container blockquote.wp-block-quote.bw-ts--active {
+  visibility: visible;
+  margin-bottom: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
