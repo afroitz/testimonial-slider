@@ -14,7 +14,7 @@
 import {
 	InnerBlocks,
 	useBlockProps,
-	__experimentalUseInnerBlocksProps as useInnerBlocksProps,
+	useInnerBlocksProps,
 	store as blockEditorStore
 } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
